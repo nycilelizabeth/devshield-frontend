@@ -382,7 +382,7 @@ export default function PhishingScanner() {
       {/* Education section */}
       <div className="bg-white rounded-xl border border-slate-200 shadow-sm p-5">
         <h3 className="font-bold text-slate-800 text-sm mb-4">📚 How to Spot Phishing URLs Yourself</h3>
-        <div className="grid grid-cols-2 gap-3">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
           {[
             { icon: '🔍', title: 'Check the domain carefully', desc: '"paypa1.com" is NOT "paypal.com". Look for number/letter substitutions.' },
             { icon: '🔒', title: 'Always look for HTTPS', desc: 'Never enter any information on an HTTP site. No exceptions.' },

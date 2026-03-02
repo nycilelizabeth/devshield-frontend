@@ -60,7 +60,7 @@ export default function Reports() {
   const print = () => window.print()
 
   return (
-    <div className="space-y-6">
+    <div className="space-y-4 lg:space-y-6">
 
       {/* Header */}
       <div className="flex items-center justify-between">
@@ -77,7 +77,7 @@ export default function Reports() {
       </div>
 
       {/* Overall score */}
-      <div className="bg-gradient-to-r from-slate-800 to-blue-900 rounded-xl p-6 text-white flex items-center gap-8">
+      <div className="bg-gradient-to-r from-slate-800 to-blue-900 rounded-xl p-4 lg:p-6 text-white flex flex-col sm:flex-row items-start sm:items-center gap-4 lg:gap-8">
         <div className="relative w-28 h-28 flex-shrink-0">
           <svg className="w-28 h-28 -rotate-90" viewBox="0 0 112 112">
             <circle cx="56" cy="56" r="48" fill="none" stroke="rgba(255,255,255,0.1)" strokeWidth="10"/>
@@ -103,7 +103,7 @@ export default function Reports() {
       </div>
 
       {/* Score breakdown */}
-      <div className="grid grid-cols-3 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
         {[
           { label:'Password Health', score:pwScore,   icon:'🔑', desc:`${strongPws} strong, ${weakPws} weak` },
           { label:'Test Coverage',   score:testScore,  icon:'✅', desc:`${passRate}% pass rate, ${tests.length} total` },

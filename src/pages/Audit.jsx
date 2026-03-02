@@ -111,7 +111,7 @@ export default function Audit() {
             </div>
 
             {/* Criteria checklist */}
-            <div className="grid grid-cols-2 gap-2">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
               {criteriaList.map(c => (
                 <div key={c.key} className={`flex items-center gap-2.5 px-3 py-2.5 rounded-lg border text-sm ${c.met?'bg-green-50 border-green-200':'bg-slate-50 border-slate-200'}`}>
                   <span className={c.met?'text-green-500':'text-slate-300'}>{c.met?'✓':'○'}</span>
@@ -153,7 +153,7 @@ export default function Audit() {
               className="w-full accent-blue-600"/>
           </div>
 
-          <div className="grid grid-cols-2 gap-3">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             {[
               { key:'upper',   label:'Uppercase (A-Z)' },
               { key:'lower',   label:'Lowercase (a-z)' },

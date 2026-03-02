@@ -128,7 +128,7 @@ export default function Vault() {
       )}
 
       {/* Stats */}
-      <div className="grid grid-cols-3 gap-4">
+      <div className="grid grid-cols-3 gap-3">
         <div className="bg-white rounded-xl border border-slate-200 shadow-sm p-4 flex items-center gap-3">
           <span className="text-2xl">🔑</span>
           <div><p className="text-2xl font-bold font-mono text-blue-600">{passwords.length}</p><p className="text-xs text-slate-500">Total Credentials</p></div>
@@ -148,7 +148,7 @@ export default function Vault() {
         <div className="bg-white rounded-xl border border-blue-200 shadow-sm p-6">
           <h3 className="font-bold text-slate-800 mb-4">🔑 Add New Credential</h3>
           <form onSubmit={handleSubmit} className="space-y-4">
-            <div className="grid grid-cols-2 gap-3">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               <div>
                 <label className="block text-xs font-semibold text-slate-600 mb-1.5">Service / Website *</label>
                 <input className="w-full px-3.5 py-2.5 border border-slate-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"

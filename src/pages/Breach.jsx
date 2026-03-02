@@ -142,7 +142,7 @@ export default function Breach() {
       )}
 
       {/* Tips */}
-      <div className="grid grid-cols-2 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         {[
           { icon:'🔑', title:'Use Unique Passwords', desc:'Never reuse the same password across multiple websites. If one site is breached, all accounts with that password are at risk.' },
           { icon:'⚡', title:'Enable 2FA Everywhere', desc:'Two-factor authentication adds a second layer of security. Even if your password is stolen, hackers cannot access your account without your phone.' },

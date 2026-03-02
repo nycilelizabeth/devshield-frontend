@@ -52,16 +52,16 @@ export default function Dashboard() {
   if(loading) return (
     <div className="space-y-6 animate-pulse">
       <div className="h-36 bg-slate-200 rounded-xl"/>
-      <div className="grid grid-cols-4 gap-4">{[...Array(4)].map((_,i)=><div key={i} className="h-24 bg-slate-200 rounded-xl"/>)}</div>
-      <div className="grid grid-cols-2 gap-6"><div className="h-56 bg-slate-200 rounded-xl"/><div className="h-56 bg-slate-200 rounded-xl"/></div>
+      <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">{[...Array(4)].map((_,i)=><div key={i} className="h-24 bg-slate-200 rounded-xl"/>)}</div>
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-4"><div className="h-56 bg-slate-200 rounded-xl"/><div className="h-56 bg-slate-200 rounded-xl"/></div>
     </div>
   )
 
   return (
-    <div className="space-y-6">
+    <div className="space-y-4 lg:space-y-6">
 
       {/* Hero banner */}
-      <div className="bg-gradient-to-r from-slate-800 to-blue-900 rounded-xl p-6 text-white flex items-center justify-between">
+      <div className="bg-gradient-to-r from-slate-800 to-blue-900 rounded-xl p-4 lg:p-6 text-white flex items-center justify-between gap-3">
         <div>
           <p className="text-blue-300 text-sm mb-1">{greet()},</p>
           <h2 className="text-2xl font-bold mb-1">{user?.name} 👋</h2>
@@ -96,14 +96,14 @@ export default function Dashboard() {
       </div>
 
       {/* Stat cards */}
-      <div className="grid grid-cols-4 gap-4">
+      <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
         {[
           { icon:'🐛', label:'Open Bugs',    value:stats.bugs,       color:'red',    to:'/bugs'      },
           { icon:'✅', label:'Test Cases',   value:stats.tests,      color:'green',  to:'/testcases' },
           { icon:'📊', label:'Pass Rate',    value:`${stats.passRate}%`, color:'blue', to:'/testcases'},
           { icon:'🔑', label:'Credentials',  value:stats.passwords,  color:'purple', to:'/vault'     },
         ].map(c => (
-          <Link key={c.to} to={c.to} className="bg-white rounded-xl border border-slate-200 shadow-sm p-5 flex items-center gap-4 hover:border-blue-300 hover:shadow-md transition-all group">
+          <Link key={c.to} to={c.to} className="bg-white rounded-xl border border-slate-200 shadow-sm p-3 lg:p-5 flex items-center gap-3 hover:border-blue-300 hover:shadow-md transition-all group">
             <div className={`w-11 h-11 rounded-xl flex items-center justify-center text-xl flex-shrink-0
               ${c.color==='red'?'bg-red-50':c.color==='green'?'bg-green-50':c.color==='blue'?'bg-blue-50':'bg-violet-50'}`}>
               {c.icon}
@@ -117,7 +117,7 @@ export default function Dashboard() {
       </div>
 
       {/* Recent bugs + tests */}
-      <div className="grid grid-cols-2 gap-6">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
         <div className="bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden">
           <div className="px-5 py-4 border-b border-slate-100 flex items-center justify-between">
             <h3 className="font-bold text-slate-800 text-sm">Recent Bugs</h3>
@@ -162,7 +162,7 @@ export default function Dashboard() {
       {/* Quick actions */}
       <div className="bg-white rounded-xl border border-slate-200 shadow-sm p-5">
         <h3 className="font-bold text-slate-800 text-sm mb-4">Quick Actions</h3>
-        <div className="grid grid-cols-4 gap-3">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-3">
           {[
             { to:'/bugs',      icon:'🐛', label:'Report Bug',    sub:'Log a new bug'        },
             { to:'/testcases', icon:'✅', label:'Add Test Case',  sub:'Write test scenario'  },

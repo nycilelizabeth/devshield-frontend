@@ -124,7 +124,7 @@ export default function Bugs() {
       </div>
 
       {/* Stats */}
-      <div className="grid grid-cols-4 gap-3">
+      <div className="grid grid-cols-2 lg:grid-cols-4 gap-3">
         {[['🔴','High',bugs.filter(b=>b.severity==='High'&&b.status!=='Resolved').length,'text-red-600'],
           ['🟡','Medium',bugs.filter(b=>b.severity==='Medium'&&b.status!=='Resolved').length,'text-amber-600'],
           ['✅','Resolved',bugs.filter(b=>b.status==='Resolved').length,'text-green-600'],
@@ -150,7 +150,7 @@ export default function Bugs() {
                 placeholder="Brief description of the issue..." value={form.title}
                 onChange={e=>setForm({...form,title:e.target.value})} required/>
             </div>
-            <div className="grid grid-cols-3 gap-3">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
               <div>
                 <label className="block text-xs font-semibold text-slate-600 mb-1.5">Severity</label>
                 <select className="w-full px-3.5 py-2.5 border border-slate-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white"
@@ -177,7 +177,7 @@ export default function Bugs() {
                 placeholder="Detailed description of the bug..." value={form.description}
                 onChange={e=>setForm({...form,description:e.target.value})}/>
             </div>
-            <div className="grid grid-cols-2 gap-3">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               <div>
                 <label className="block text-xs font-semibold text-slate-600 mb-1.5">Steps to Reproduce</label>
                 <textarea className="w-full px-3.5 py-2.5 border border-slate-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 resize-none h-20 font-mono"

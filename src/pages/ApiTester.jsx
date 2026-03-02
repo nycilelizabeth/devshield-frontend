@@ -230,7 +230,7 @@ export default function ApiTester() {
 
         <div className="p-5 space-y-4">
           {/* Method + URL + Send */}
-          <div className="flex gap-2">
+          <div className="flex flex-col sm:flex-row gap-2">
             <select
               value={method} onChange={e=>setMethod(e.target.value)}
               className={`px-3 py-2.5 border rounded-lg text-sm font-bold cursor-pointer focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white ${methodColor(method)}`}
@@ -416,7 +416,7 @@ export default function ApiTester() {
           <div className="text-5xl mb-4">🔌</div>
           <p className="text-slate-600 font-bold text-base mb-2">Enter a URL and click Send</p>
           <p className="text-slate-400 text-sm mb-6">DevShield will send the request and automatically run 8 security checks on the response</p>
-          <div className="grid grid-cols-4 gap-3 max-w-lg mx-auto text-xs">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 max-w-lg mx-auto text-xs">
             {['HTTPS Check','Sensitive Data','Security Headers','Response Time'].map(c=>(
               <div key={c} className="bg-slate-50 border border-slate-200 rounded-lg py-2.5 px-2 text-slate-500 font-semibold">{c}</div>
             ))}

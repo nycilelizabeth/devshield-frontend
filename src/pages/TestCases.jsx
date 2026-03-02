@@ -101,7 +101,7 @@ export default function TestCases() {
               <input className="w-full px-3.5 py-2.5 border border-slate-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
                 placeholder="e.g. Valid login with correct credentials" value={form.title} onChange={e=>setForm({...form,title:e.target.value})} required/>
             </div>
-            <div className="grid grid-cols-3 gap-3">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
               <div>
                 <label className="block text-xs font-semibold text-slate-600 mb-1.5">Priority</label>
                 <select className="w-full px-3.5 py-2.5 border border-slate-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white"
@@ -120,7 +120,7 @@ export default function TestCases() {
                   placeholder="e.g. Auth, Vault, API" value={form.module} onChange={e=>setForm({...form,module:e.target.value})}/>
               </div>
             </div>
-            <div className="grid grid-cols-2 gap-3">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               <div>
                 <label className="block text-xs font-semibold text-slate-600 mb-1.5">Test Steps</label>
                 <textarea className="w-full px-3.5 py-2.5 border border-slate-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 resize-none h-24 font-mono"

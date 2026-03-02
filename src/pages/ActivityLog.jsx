@@ -119,7 +119,7 @@ export default function ActivityLog() {
 
       {/* Stats */}
       {stats && (
-        <div className="grid grid-cols-4 gap-4">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-3">
           {[
             { icon:'📋', label:'Total Events',    value: stats.total,    color:'text-blue-600'   },
             { icon:'📅', label:'Last 30 Days',    value: stats.recent,   color:'text-green-600'  },

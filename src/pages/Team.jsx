@@ -148,7 +148,7 @@ export default function Team() {
 
       {/* NO TEAM — Show create/join */}
       {!team && (
-        <div className="grid grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
 
           {/* Create Team */}
           <div className="bg-white rounded-xl border border-slate-200 shadow-sm p-6">
@@ -202,7 +202,7 @@ export default function Team() {
       {team && (
         <>
           {/* Team Info Card */}
-          <div className="bg-gradient-to-r from-blue-600 to-violet-600 rounded-xl p-6 text-white">
+          <div className="bg-gradient-to-r from-blue-600 to-violet-600 rounded-xl p-4 lg:p-6 text-white">
             <div className="flex items-start justify-between">
               <div>
                 <div className="flex items-center gap-3 mb-2">
@@ -256,7 +256,7 @@ export default function Team() {
 
           {/* Overview Tab */}
           {tab === 'overview' && (
-            <div className="grid grid-cols-3 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
               {[
                 ['👥', 'Total Members', team.members.length, 'text-blue-600'],
                 ['👑', 'Owners', team.members.filter(m=>m.role==='owner').length, 'text-purple-600'],

@@ -165,7 +165,7 @@ export default function EncryptedNotes() {
       </div>
 
       {/* Stats */}
-      <div className="grid grid-cols-3 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
         <div className="bg-white rounded-xl border border-slate-200 shadow-sm p-4 flex items-center gap-3">
           <span className="text-2xl">📝</span>
           <div><p className="text-2xl font-bold font-mono text-blue-600">{notes.length}</p><p className="text-xs text-slate-500">Total Notes</p></div>
@@ -256,7 +256,7 @@ export default function EncryptedNotes() {
           <p className="text-slate-400 text-sm mt-1">Create your first secure note using the button above</p>
         </div>
       ) : (
-        <div className="grid grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           {filtered.map(note => {
             const c = getColor(note.color)
             const isOpen = unlocked[note.id]
