@@ -3,8 +3,9 @@ import { useAuth } from '../context/AuthContext'
 
 const navGroups = [
   { label:'Overview', items:[
-    { to:'/dashboard', icon:'⊞', label:'Dashboard' },
-    { to:'/activity',  icon:'📋', label:'Audit Trail' },
+    { to:'/dashboard', icon:'⊞',  label:'Dashboard'   },
+    { to:'/activity',  icon:'📋', label:'Audit Trail'  },
+    { to:'/team',      icon:'👥', label:'Team'         },
   ]},
   { label:'Testing', items:[
     { to:'/bugs',      icon:'🐛', label:'Bug Tracker'  },

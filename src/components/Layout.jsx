@@ -13,6 +13,8 @@ const pageTitles = {
   '/audit':     ['Password Audit',    'Analyze and improve password strength'],
   '/notes':     ['Encrypted Notes',   'End-to-end encrypted private notes'],
   '/reports':   ['Security Report',   'Complete security health overview'],
+  '/team':      ['Team',              'Collaborate with your team members'],
+  '/activity':  ['Audit Trail',       'Complete log of all security activities'],
 }
 
 export default function Layout() {
