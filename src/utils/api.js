@@ -64,5 +64,8 @@ export const teamAPI = {
   removeMember: (id)    => api.delete(`/teams/members/${id}`),
   updateRole: (id, role)=> api.put(`/teams/members/${id}/role`, { role }),
 }
-
+// PHISHING SCANNER APIs
+export const phishingAPI = {
+  scan: (url) => api.post('/phishing/scan', { url }),
+}
 export default api
